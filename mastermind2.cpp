@@ -48,7 +48,7 @@ pair<int,int> pitaj(vector<int>&upit){
    // cout << '\n';
     return make_pair(tacnih,tacnih2);
 }
-vector<int> gas(vector<vector<int>>pre, vector<vector<int>>svi){
+vector<int> sledeciUpit(vector<vector<int>>pre, vector<vector<int>>svi){
     int mini = INT_MAX;
     vector<int> naj;
     for(auto &upit : svi){
@@ -81,7 +81,7 @@ void igraj(){
                 sledeci.push_back(x);
         }
         preostali = sledeci;
-        upit = gas(preostali,svi);
+        upit = sledeciUpit(preostali,svi);
         pokusaji++;
         
     }
@@ -111,8 +111,8 @@ int main()
         cout << odgovor.first << ' ' << odgovor.second << '\n';
         if(odgovor.first==4) tacno = true;
     }
-    if(tacno) cout << "BRAVOOOOOO";
-    else cout << "vise srece drugi put" << " resenje je bilo " << res[0] << ' '<< res[1] << ' '<< res[2] << ' '<< res[3] << ' ';
+    if(tacno) cout << "Bravo";
+    else cout << "Vise srece drugi put" << " resenje je bilo " << res[0] << ' '<< res[1] << ' '<< res[2] << ' '<< res[3] << ' ';
     }
     else{
         igraj();
